@@ -5,3 +5,7 @@ Repository for the "Securely Exposing A Microservice-based E-commerce Applicatio
 Istio-Sidecar Injection
 
 kubectl label namespace online-boutique istio-injection=enabled --overwrite
+
+Istio Installation
+
+https://istio.io/latest/docs/setup/install/istioctl/
