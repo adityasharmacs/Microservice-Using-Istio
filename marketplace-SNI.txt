@@ -1,0 +1,69 @@
+openssl s_client -connect $INGRESS:443 -servername marketplace.boutiquestore.com -CAfile root.crt
+CONNECTED(00000003)
+depth=1 O = boutiquestore Inc., CN = boutiquestore.com
+verify return:1
+depth=0 CN = marketplace.boutiquestore.com, O = boutique store
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=marketplace.boutiquestore.com/O=boutique store
+   i:/O=boutiquestore Inc./CN=boutiquestore.com
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIC7jCCAdYCAQAwDQYJKoZIhvcNAQEFBQAwOTEbMBkGA1UECgwSYm91dGlxdWVz
+dG9yZSBJbmMuMRowGAYDVQQDDBFib3V0aXF1ZXN0b3JlLmNvbTAeFw0yMTA5MjEw
+NjUyNDRaFw0yMjA5MjEwNjUyNDRaMEExJjAkBgNVBAMMHW1hcmtldHBsYWNlLmJv
+dXRpcXVlc3RvcmUuY29tMRcwFQYDVQQKDA5ib3V0aXF1ZSBzdG9yZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALvAK40StygcagiwSJeM0AfMl8S0IZgt
+PsMC6oT+eRmyCJhXVy8MzOfYJzcB+MXCUa05MPtHoEnAJ+DA13P76xIU9rAzfWVa
+Vg5XNk0WjJG/ZfSOjUIlqac7ibInABm/hPup5U/Z0BnGCnrmcnE9ve/LCiTClJ3D
+wCi8l5CQEHMPPJ0sqtpyC++jSdWeK6wQQiDtBf9cmlLIcgSh6O4CJu9srQWgHMiO
+8SBX6W1/F3ZhHRO037tAYrMcorCENnUHeT6fq7fycSrDVKlK3LgBVhV/VxKLzxTM
+oKiH6Wln6hy8X0MNOG+2LmpyeGzbWONrjHL3HJgbrv0Mcx390gPx0RkCAwEAATAN
+BgkqhkiG9w0BAQUFAAOCAQEAuvldWJ5RbMK8UNUUMQl5XO9k3Ucl6lBmXQ3gCZxF
+9IYn3a24X00GYufCO1AwqubiJWG5DAy19oHziBghCiT5+wDNxDmtQ5eZC92fnA0l
+AJNblbry4QpBPLhWLXK8oJ+esh5NEo4X7SitQzb2hHwNlIXFaaMpeL8ucYFuf7DH
+TzADunua7JT+c/dEgEKrAeU2ioV81dMkhyzPK/PEbXWqU0x2TgeRDs7V0QhCRgkL
+57DJGw0Gm9ksPeJMBHYFPM3QpxpTFTN/PqVfV7U0ZPr7i65SHLJCGtdrVC0mbP/T
+L+UO2kY2UUfwm9VhsXOVzcRXj4UqwV+5jzP2p0hKbMzFxA==
+-----END CERTIFICATE-----
+subject=/CN=marketplace.boutiquestore.com/O=boutique store
+issuer=/O=boutiquestore Inc./CN=boutiquestore.com
+---
+No client certificate CA names sent
+Server Temp Key: ECDH, X25519, 253 bits
+---
+SSL handshake has read 1397 bytes and written 319 bytes
+---
+New, TLSv1/SSLv3, Cipher is ECDHE-RSA-CHACHA20-POLY1305
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-CHACHA20-POLY1305
+    Session-ID: 15AF0B8E288757B43E025B97C5F34098C89A0538BCB0D1584E3727CDCC5EE9EA
+    Session-ID-ctx: 
+    Master-Key: A03847DE61B0023874CDE44DA77FDF1B1394FA25CA7ADFB23BCACC85A308A90700106949B1D761D330474B4C70CE371A
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - eb 22 48 7c d8 8b 89 88-51 8b 48 9e ef 48 fe bc   ."H|....Q.H..H..
+    0010 - cf dc c2 7e 84 59 f8 4d-c8 9a 50 ec 92 81 62 73   ...~.Y.M..P...bs
+    0020 - b4 f0 4e d8 8c 95 b1 ad-f0 aa 5d e5 f6 16 56 ef   ..N.......]...V.
+    0030 - 21 f8 1a c5 54 e6 0d 2f-2e d2 0f dd 86 99 71 17   !...T../......q.
+    0040 - 6c b3 09 ed 33 1d 59 60-c3 11 72 da c1 6a ce ec   l...3.Y`..r..j..
+    0050 - 48 8f d9 e1 c6 9b ad 6d-e9 0b af 09 7f ab f5 4f   H......m.......O
+    0060 - 81 6f 38 30 6a 68 96 c5-06 d2 0e 4d 88 70 b2 ee   .o80jh.....M.p..
+    0070 - 54 70 61 22 1b e4 ed 11-98 45 90 08 76 b6 e1 a7   Tpa".....E..v...
+    0080 - 63 53 b3 fb 4d 37 ec 39-fd b2 d6 1f 16 f0 2e 92   cS..M7.9........
+    0090 - b2 9c ad e8 33 bb 37 c6-43 37 4b 0a 75 1a ee ff   ....3.7.C7K.u...
+    00a0 - c3 00 7f db 9f ba bb 6e-ab 11 9f e2 04 18 ed b5   .......n........
+    00b0 - 2c e0 93 2e a1 de a6 63-6e d9 a8 2a 6f eb 76 c9   ,......cn..*o.v.
+
+    Start Time: 1632213278
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+---
