@@ -1,4 +1,4 @@
-openssl s_client -connect $INGRESS:443 -servername marketplace.boutiquestore.com -CAfile root.crt
+$ openssl s_client -connect $INGRESS:443 -servername marketplace.boutiquestore.com -CAfile root.crt
 CONNECTED(00000003)
 depth=1 O = boutiquestore Inc., CN = boutiquestore.com
 verify return:1
